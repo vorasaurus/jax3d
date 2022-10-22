@@ -18,7 +18,7 @@ from absl import app
 
 from jax3d.projects.nesf.nerfstatic import eval_lib
 from jax3d.projects.nesf.nerfstatic import eval_semantic_lib
-from jax3d.projects.nesf.nerfstatic import render_semantic_lib
+# from jax3d.projects.nesf.nerfstatic import render_semantic_lib
 from jax3d.projects.nesf.nerfstatic.utils import config as nerf_config
 
 
@@ -28,8 +28,8 @@ def main(unused_argv):
     eval_lib.evaluate(params=params)
   elif params.train.mode == "SEMANTIC":
     eval_semantic_lib.evaluate(params=params)
-  elif params.train.mode == "RENDER":
-    render_semantic_lib.render(params=params)
+#   elif params.train.mode == "RENDER":
+#     render_semantic_lib.render(params=params)
   else:
     raise NotImplementedError(params.train.mode)
 
